@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Emotion Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Emotion Analysis</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Text</th>
+                    <th>Detected Emotion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in emotion_entries %}
+                <tr>
+                    <td>{{ entry.text }}</td>
+                    <td>{{ entry.emotion }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/profile">Back to Profile</a>
+    </div>
+</body>
+</html>

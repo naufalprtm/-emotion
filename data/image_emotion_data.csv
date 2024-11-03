@@ -1,0 +1,5 @@
+user_id,image_path,emotion
+1,"images/user1_image1.jpg",happy
+1,"images/user1_image2.jpg",sad
+2,"images/user2_image1.jpg",angry
+3,"images/user3_image1.jpg",anxious

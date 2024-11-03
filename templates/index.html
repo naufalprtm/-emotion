@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychobot - Emotion Analysis</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Psychobot</h1>
+        <textarea id="inputText" class="form-control" placeholder="Enter text here..."></textarea>
+        <button class="btn btn-primary" onclick="analyzeText()">Analyze Text Emotion</button>
+        <input type="file" id="imageInput" class="form-control" accept="image/*">
+        <button class="btn btn-primary" onclick="analyzeImage()">Analyze Image Emotion</button>
+        <div id="resultText" class="mt-3"></div>
+        <div id="resultImage" class="mt-3"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
